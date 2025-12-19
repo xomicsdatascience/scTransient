@@ -1,6 +1,7 @@
 import numpy as np
 from scTransient.windowing import GaussianWindow, RectWindow
 from typing import List
+from scipy.special import gamma
 
 
 def generate_synthetic_data(n_cells,
@@ -343,7 +344,7 @@ def generate_spike_signal_nb(spike_amplitudes: List[float],
 
     return signal
 
-from scipy.special import gamma
+
 
 
 def pseudotime_density(function_name: str,

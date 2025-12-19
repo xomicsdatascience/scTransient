@@ -92,6 +92,35 @@ results = pd.DataFrame({
 print(results)
 ```
 
+### 4. Synthetic Data Generation
+
+You can generate synthetic datasets with known transient events to test and benchmark the detection algorithms. The `synthetic` module provides tools to create custom pseudotime densities and gene expression patterns with Gaussian spikes.
+
+```python
+from scTransient.synthetic import generate_synthetic_data, pseudotime_density
+
+# 1. Define a pseudotime density (e.g., more cells in the middle)
+density = pseudotime_density("uniform", function_params={"n_windows": 1, "width": 1})
+
+# 2. Generate synthetic data
+# 1000 cells, 100 genes, with 5 genes having transient spikes
+data, pseudotimes, spike_sigs = generate_synthetic_data(
+    n_cells=1000,
+    n_genes=100,
+    n_signal_genes=5,
+    pseudotime_density=density,
+    spike_times=[0.3, 0.7],     # Spikes at 30% and 70% of pseudotime
+    spike_widths=[0.05, 0.05],   # Width of each spike
+    spike_amplitudes=[5, 10],   # Amplitude of each spike
+    seed=42
+)
+
+# 'data' is a (n_cells, n_genes) array of expression values
+# 'pseudotimes' are the assigned pseudotime values for each cell
+```
+
+**NOTE**: The synthetic data generation functions have been ported from the original project; they have not been thoroughly tested.
+
 ## License
 
 This project is licensed under the GPLv3 License - see the `pyproject.toml` file for details.
