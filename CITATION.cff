@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Hutton"
+  given-names: "Alexandre"
+  orcid: "https://orcid.org/0000-0002-7661-686X"
+- family-names: "Meyer"
+  given-names: "Jesse"
+title: "scTransient"
+version: 0.0.0
+doi: 10.1101/2025.05.07.652753
+date-released: 2025-12-19
+url: "https://github.com/xomicsdatascience/scTransient"

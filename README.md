@@ -1,5 +1,7 @@
 # scTransient
 
+[![DOI](https://img.shields.io/badge/DOI-10.1101%2F2025.05.07.652753-blue.svg)](https://doi.org/10.1101/2025.05.07.652753)
+
 `scTransient` is a Python package designed for detecting transient events in single-cell data along a pseudotime trajectory. It utilizes wavelet transforms and windowing techniques to identify and score gene expression patterns that are localized in pseudotime, which is particularly useful for identifying key transition events.
 
 ## Features
