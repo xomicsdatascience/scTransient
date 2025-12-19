@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scTransient"
+version = "0.0.0"
+description = "Package for detecting transient events in pseudotime"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "GPLv3" }
+authors = [
+  { name = "Alexandre Hutton", email = "50920802+AlexandreHutton@users.noreply.github.com" }
+]
+keywords = ["single-cell", "pseudotime", "transient", "trajectory inference"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: GPLv3",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scTransient*"]
+exclude = ["tests*"]
