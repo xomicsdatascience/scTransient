@@ -7,7 +7,7 @@ name = "scTransient"
 version = "0.0.0"
 description = "Package for detecting transient events in pseudotime"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.9"
 license = { text = "GPLv3" }
 dynamic = ["dependencies"]
 authors = [
